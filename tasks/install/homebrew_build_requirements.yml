@@ -2,4 +2,5 @@
 - name: Install pyenv build requirements with Homebrew
   become: false
   homebrew:
+    path: "{{ pyenv_brew_path | default(omit) }}"
     name: "{{ pyenv_build_requirements_with_homebrew }}"
